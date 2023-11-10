@@ -6,6 +6,9 @@ class QueryWriter:
     def __str__(self):
         return self.query
 
+    def __repr__(self):
+        return self.query
+
     def select(self, column_name="*"):
         return QueryWriter(self.query + f"SELECT {column_name}")
 
